@@ -7,9 +7,8 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <Router>
-      <Navbar />
-      <hr />
-      <div className="App">
+      <div className="container">
+        <Navbar />
         <Route path="/" exact component={Books} />
         <Route path="/categories" exact component={Categories} />
       </div>
