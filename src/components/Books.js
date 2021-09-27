@@ -1,18 +1,18 @@
-import { useSelector, useDispatch } from 'react-redux';
-import * as booksActions from '../redux/books/books';
+import { useSelector } from 'react-redux';
+import AddBook from './AddBook';
+import SingleBook from './SingleBook';
 
 const Books = () => {
   const books = useSelector((state) => state.books);
-  const dispatch = useDispatch();
-  const { addBook } = booksActions;
 
   return (
     <div>
-      <h1>
-        Bookstore
-        {books}
-      </h1>
-      <button type="button" onClick={() => dispatch(addBook())}>+</button>
+      <h1>Books List</h1>
+      <ul>
+        {books.length > 0 ? books.map((book) => <SingleBook key={book.id} book={book} />) : 'No Books'}
+      </ul>
+      <hr />
+      <AddBook />
     </div>
   );
 };
