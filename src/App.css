@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  background: #0290ff;
+  display: flex;
+  color: aliceblue;
+  padding: 3%;
+}
+
+.flex-right ul {
+  padding-top: 11%;
+  list-style: none;
+  float: right;
+}
+
+.flex-right ul li {
+  display: inline;
+  padding: 3%;
+}
+
+.active {
+  padding: 2px;
+  border: 1px solid aliceblue;
+}
+
+.flex-right ul li a {
+  color: aliceblue;
+  text-decoration: none;
+}
