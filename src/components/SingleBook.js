@@ -6,11 +6,12 @@ const SingleBook = ({ book }) => {
   const dispatch = useDispatch();
   const { title, id, category } = book;
 
-  // console.log('Test', title);
+  const capitalized = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+
   return (
     <li className="list-group-item d-flex justify-content-between align-items-start mb-3">
       <div className="ms-2 me-auto">
-        <div className="fw-bold">{title}</div>
+        <div className="fw-bold">{capitalized(title)}</div>
         <small>{category}</small>
         <br />
         <button type="button" className="btn btn-sm btn-link" onClick={() => dispatch(removeBook(id))}>Remove Book</button>

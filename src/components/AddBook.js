@@ -5,19 +5,19 @@ import { addBook } from '../redux/books/books';
 const AddBook = () => {
   const books = useSelector((state) => state.books);
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const [error, setError] = useState('');
   const dispatch = useDispatch();
   const createBook = (e) => {
     e.preventDefault();
-    if (title && author) {
-      const data = { id: books.length + 1, title, author };
+    if (title && category) {
+      const data = { item_id: books.length + 1, title, category };
       dispatch(addBook(data));
       setTitle('');
-      setAuthor('');
+      setCategory('');
       setError('');
     } else {
-      setError('Title and Author is required!');
+      setError('Title and Category is required!');
     }
   };
 
@@ -30,7 +30,7 @@ const AddBook = () => {
           <input className="form-control" type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Book Title" />
         </div>
         <div className="col p-2">
-          <input className="form-control" type="text" value={author} onChange={(e) => setAuthor(e.target.value)} placeholder="Book Title" />
+          <input className="form-control" type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Book Title" />
         </div>
         <div className="col p-2 d-grid">
           <button className="btn btn-primary btn-sm" type="submit">Add Book</button>

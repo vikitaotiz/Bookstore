@@ -1,5 +1,13 @@
 import { combineReducers } from 'redux';
 
+const saveBookToApi = async (data) => {
+  await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/08Tm1nU2azXx78h1XJOM/books', {
+    method: 'POST',
+    headers: { 'Content-type': 'application/json; charset=UTF-8' },
+    body: JSON.stringify(data),
+  });
+};
+
 // Actions
 export const setBooks = (books) => ({
   type: 'SET_BOOKS',
@@ -23,6 +31,7 @@ export const booksReducer = (state = [], action) => {
       return state.concat(action.payload);
 
     case 'ADD_BOOK':
+      saveBookToApi(action.payload);
       return [action.payload, ...state];
 
     case 'REMOVE_BOOK':

@@ -16,7 +16,7 @@ const Books = () => {
         const result = Object.keys(data).map((key) => [Number(key), data[key][0]]);
         result.forEach((val) => {
           const newObj = {
-            id: val[0],
+            item_id: val[0],
             title: val[1].title,
             category: val[1].category,
           };
@@ -33,7 +33,7 @@ const Books = () => {
   return (
     <div>
       <ul className="list-group">
-        {books.length > 0 ? books.map((book) => <SingleBook key={book.id} book={book} />)
+        {books.length > 0 ? books.map((book) => <SingleBook key={book.item_id} book={book} />)
           : 'No Books'}
       </ul>
       <AddBook />
