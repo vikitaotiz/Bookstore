@@ -10,9 +10,8 @@ const SingleBook = ({ book }) => {
   return (
     <li className="list-group-item d-flex justify-content-between align-items-start mb-3">
       <div className="ms-2 me-auto">
-        <div className="fw-bold">{capitalized(title)}</div>
         <small>{category}</small>
-        <br />
+        <div className="fw-bold">{capitalized(title)}</div>
         <button type="button" className="btn btn-sm btn-link" onClick={() => dispatch(removeBook(id))}>Remove Book</button>
       </div>
       <button type="button" className="btn btn-sm btn-primary">Current Chapter</button>
