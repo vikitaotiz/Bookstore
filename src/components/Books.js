@@ -7,11 +7,10 @@ const Books = () => {
 
   return (
     <div>
-      <h1>Books List</h1>
-      <ul>
-        {books.length > 0 ? books.map((book) => <SingleBook key={book.id} book={book} />) : 'No Books'}
+      <ul className="list-group">
+        {books.length > 0 ? books.map((book) => <SingleBook key={book.id} book={book} />)
+          : 'No Books'}
       </ul>
-      <hr />
       <AddBook />
     </div>
   );
