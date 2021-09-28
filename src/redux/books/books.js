@@ -21,7 +21,7 @@ export const removeBook = (id) => ({
 export const booksReducer = (state = [], action) => {
   switch (action.type) {
     case 'SET_BOOKS':
-      return state.concat(action.payload);
+      return action.payload;
 
     case 'ADD_BOOK':
       saveBookToApi(action.payload);
