@@ -7,11 +7,12 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <Router>
-      <Navbar />
-      <hr />
-      <div className="App">
-        <Route path="/" exact component={Books} />
-        <Route path="/categories" exact component={Categories} />
+      <div className="wrapper border shadow mt-5">
+        <Navbar />
+        <div className="wrapper container">
+          <Route path="/" exact component={Books} />
+          <Route path="/categories" exact component={Categories} />
+        </div>
       </div>
     </Router>
   );
