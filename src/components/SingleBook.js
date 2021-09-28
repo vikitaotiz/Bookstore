@@ -4,8 +4,7 @@ import { removeBook } from '../redux/books/books';
 
 const SingleBook = ({ book }) => {
   const dispatch = useDispatch();
-  const { title, id, category } = book;
-
+  const { title, item_id: id, category } = book;
   const capitalized = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
   return (

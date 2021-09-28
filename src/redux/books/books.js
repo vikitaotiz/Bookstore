@@ -1,12 +1,5 @@
 import { combineReducers } from 'redux';
-
-const saveBookToApi = async (data) => {
-  await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/08Tm1nU2azXx78h1XJOM/books', {
-    method: 'POST',
-    headers: { 'Content-type': 'application/json; charset=UTF-8' },
-    body: JSON.stringify(data),
-  });
-};
+import { saveBookToApi, removeBookFromApi } from '../ApiCalls';
 
 // Actions
 export const setBooks = (books) => ({
@@ -35,7 +28,8 @@ export const booksReducer = (state = [], action) => {
       return [action.payload, ...state];
 
     case 'REMOVE_BOOK':
-      return state.filter((book) => book.id !== action.payload);
+      removeBookFromApi(action.payload);
+      return state.filter((book) => book.item_id !== action.payload);
 
     default:
       return state;
