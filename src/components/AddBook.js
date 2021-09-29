@@ -26,7 +26,12 @@ const AddBook = () => {
 
   return (
     <div className="mt-3">
-      <h6>Add New Book</h6>
+      <hr />
+      <h6 className="primary-color">
+        <i className="fas fa-plus-square" />
+        {' '}
+        Add New Book
+      </h6>
       <small className="alert-danger">{error}</small>
       <form onSubmit={createBook} className="row p-3">
         <div className="col-lg-4 p-2">
@@ -36,7 +41,11 @@ const AddBook = () => {
           <input className="form-control" type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Book Category" />
         </div>
         <div className="col-lg-4 p-2 d-grid">
-          <button className="btn btn-primary btn-sm" type="submit">Add Book</button>
+          <button className="btn btn-primary btn-sm" type="submit">
+            <i className="far fa-save" />
+            {' '}
+            Add Book
+          </button>
         </div>
       </form>
     </div>
