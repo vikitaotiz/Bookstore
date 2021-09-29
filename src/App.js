@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="wrapper border shadow mt-5">
         <Navbar />
-        <div className="wrapper container">
+        <div className="container">
           <Route path="/" exact component={Books} />
           <Route path="/categories" exact component={Categories} />
         </div>

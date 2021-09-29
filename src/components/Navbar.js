@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const books = useSelector((state) => state.books.length);
+
   return (
     <div className="navbar navbar-expand-lg navbar-light bg-white mb-5 my-0">
       <div className="container-fluid">
