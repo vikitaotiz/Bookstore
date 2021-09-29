@@ -1,6 +1,6 @@
 # Bookstore
 
-This is a simple bookstore project setup using react js.
+This is a simple bookstore project setup using react js redux.
 
 ## Built With
 
@@ -10,6 +10,13 @@ This is a simple bookstore project setup using react js.
 - Redux
 - React-redux
 - Javascript
+
+[Live Demo](https://focused-nobel-9dd982.netlify.app/)
+
+## Screenshot
+
+![print](https://user-images.githubusercontent.com/42869046/135301028-25c4f4dc-b557-4d86-a479-471a44efcb0f.JPG)
+
 
 ## Getting Started
 
