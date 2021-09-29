@@ -17,9 +17,11 @@ const SingleBook = ({ book }) => {
           {capitalized(title)}
         </div>
         <button type="button" className="btn btn-sm btn-link text-decoration-none error" onClick={() => dispatch(removeBook(id))}>
-          <i className="far fa-trash-alt" />
-          {' '}
-          Remove Book
+          <span className="error">
+            <i className="far fa-trash-alt" />
+            {' '}
+            Remove Book
+          </span>
         </button>
       </div>
       <button type="button" className="btn btn-sm btn-primary" disabled>
