@@ -11,7 +11,7 @@ This is a simple bookstore project setup using react js redux.
 - React-redux
 - Javascript
 
-[Live Demo](https://pedantic-babbage-05b20f.netlify.app/)
+[Live Demo](https://focused-nobel-9dd982.netlify.app/)
 
 ## Screenshot
 
