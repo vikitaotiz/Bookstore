@@ -10,13 +10,17 @@ const SingleBook = ({ book }) => {
   return (
     <li className="list-group-item d-flex justify-content-between align-items-start mb-3">
       <div className="ms-2 me-auto">
-        <small>{category}</small>
-        <div className="fw-bold">
+        <small><i>{category}</i></small>
+        <div className="fw-bold primary-color">
           <i className="fas fa-book mr-3" />
           {' '}
           {capitalized(title)}
         </div>
-        <button type="button" className="btn btn-sm btn-link" onClick={() => dispatch(removeBook(id))}>Remove Book</button>
+        <button type="button" className="btn btn-sm btn-link text-decoration-none error" onClick={() => dispatch(removeBook(id))}>
+          <i className="far fa-trash-alt" />
+          {' '}
+          Remove Book
+        </button>
       </div>
       <button type="button" className="btn btn-sm btn-primary" disabled>
         <i className="fab fa-pied-piper-alt" />
